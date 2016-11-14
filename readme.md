@@ -24,7 +24,9 @@ worked ok but it's time to have something better.
 
 ## Installation
 
-You can binaries over here: {{fill_me_out}}
+You can binaries over here: https://github.com/VictorBjelkholm/quickwiki/releases
+
+Or, install it with go if you have that installed:
 
 ```
 go get -u github.com/victorbjelkholm/quickwiki
@@ -60,7 +62,8 @@ argument with the default settings and one demo page.
 
 ### `version`
 
-`quickwiki version` simply prints the current version of your quickwiki binary
+`quickwiki version` simply prints the current version of your quickwiki binary,
+so you can verify from source you're actually running the right binary. Good stuff!
 
 ## API
 
