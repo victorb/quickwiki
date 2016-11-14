@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QuickWiki</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div id="title"><a href="../home">QuickWiki</a></div>
+		</div>
+		<div id="content">
+			<h1>{{.Page.Title}}</h1>
+			{{ .Page.Contents }}
+		</div>
+		<div id="menu">
+			<ul>
+			{{/*
+				{{ range .Pages }}
+					<li>
+						{{ .Name }}
+					</li>
+				{{ end }}
+			*/}}
+			</ul>
+		</div>
+		<div id="footer">
+			<!-- MIT License 2016 - Victor Bjelkholm -->
+			<small>Words: {{/* .Page.NumberOfWords */}}</small>
+		</div>
+	</div>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Hind+Vadodara:300,400,500,600,700');
+	</style>
+</body>
+</html>

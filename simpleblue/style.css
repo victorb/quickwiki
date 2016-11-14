@@ -1,0 +1,79 @@
+html {
+    overflow-y: scroll;
+}
+
+#title {
+	font-family: Hind Vadodara;
+	font-weight: bolder;
+	font-size: 32px;
+	color: rgb(124, 198, 243);
+	letter-spacing: 4px;
+}
+
+h1 {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+body, html {
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFF;
+	color: #2c3e50;
+	font-family: sans-serif;
+}
+a {
+	color: rgb(49, 147, 198);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(49, 147, 198, 0.2);
+}
+img {
+	max-width: 700px;
+}
+#wrapper {
+	position: relative;
+	width: 700px;
+	left: 50%;
+	margin-left: -350px;
+	font-size: 18px;
+}
+#content {
+	/* padding-top: 100px; */
+	padding-bottom: 50px;
+	line-height: 1.5em;
+	font-family: Arial;
+	letter-spacing: 1.1px;
+	font-size: 14px;
+}
+#header {
+	/* position: fixed; */
+	position: relative;
+	background-color: rgba(255,255,255,0.95);
+	width: 100%;
+}
+#header a {
+	text-decoration: none;
+	border: none;
+}
+a:hover {
+	border-bottom: 1px solid rgba(49, 147, 198, 1);
+}
+#footer {
+	position: relative;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: #16a085;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+hr {
+	border: 1px solid #3498db;
+}

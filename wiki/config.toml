@@ -1,0 +1,20 @@
+# Title & Description sets the global values of this Wiki
+title = "QuickWiki"
+description = "QuickWiki's own wik"
+
+
+# Theme configuration goes here
+[theme]
+# Theme Name decides which theme to load
+name = "simpleblue"
+
+# Global options of this wiki
+[options]
+output_directory = "./public/"
+pages_directory = "./pages/"
+
+# Plugins
+[plugins]
+# Decides what plugins are activated or not
+# activated = [ "markdown", "quicklinks", "auto_link"]
+activated = ["markdown"]
