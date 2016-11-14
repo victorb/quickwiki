@@ -69,7 +69,7 @@ so you can verify from source you're actually running the right binary. Good stu
 
 Currently, the API is limited except for what the CLI offers. Might change in the
 future. If you're interested in extending QuickWiki, check out the pages about
-{{themes}} and/or {{themes}}.
+[themes](http://quickwiki.tech/themes/) and [plugins](http://quickwiki.tech/plugins/).
 
 ## Contribute
 
@@ -81,11 +81,11 @@ Contributions are very welcome in any area! Things that notably needs improvemen
 * Performance testing and improvements
 * General code style (I'm not really used to Go yet...)
 * Better documentation! Quickwiki documentation is driven by QuickWiki itself,
-see the source for our wiki here: {{link_to_wiki_source}}
+see the source for our wiki here: https://github.com/VictorBjelkholm/quickwiki/tree/master/wiki
 * Finding bugs! There is bugs, we just have to find and fix them!
 
-Remember to check out our contribute.md file for instructions on how to get a
-development environment setup for QuickWiki {{link_to_contribute_md}}
+Remember to check out our [contribute.md](./contribute.md) file for instructions on how to get a
+development environment setup for QuickWiki
 
 If you're looking for features to implement, we have todo.md file that contains
 planned features that are wanted. Open an issue if you have any questions about them.
