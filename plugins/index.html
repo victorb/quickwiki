@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QuickWiki</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div id="title"><a href="../home">QuickWiki</a></div>
+		</div>
+		<div id="content">
+			<h1>plugins</h1>
+			<p>Yeah&hellip;</p>
+
+<h2>Research</h2>
+
+<p>Where to put the plugin system? Need certain hooks&hellip;</p>
+
+<h3>BUILD_WIKI</h3>
+
+<ul>
+<li>BEFORE</li>
+<li>AFTER</li>
+</ul>
+
+<h3>BUILD_FILE</h3>
+
+<ul>
+<li>Before</li>
+<li>After</li>
+<li>BeforeWrite</li>
+<li>AfterWrite</li>
+</ul>
+
+<h2>Examples</h2>
+
+<h3><a href="../markdown">Markdown</a></h3>
+
+<p>Parses .md files and saves .html files. Responsible for finding the files, transforming
+the content and saving them again.</p>
+
+<h3>AutoLink</h3>
+
+<p>Should automatically replace words with links if they have a corresponding page.</p>
+
+<p>If the word is multiple words, page will be matched like this:</p>
+
+<pre><code>Automagic Words === automagic-words.md
+</code></pre>
+
+<h3>SimpleLinks</h3>
+
+<p>Links by doing brackets around words.</p>
+
+<p><code>[A PagA Pagee]</code></p>
+
+<h3>DataTables</h3>
+
+<p>Set values for pages that can read elsewhere and inline</p>
+
+<h3>Categories</h3>
+
+<p>Depends on DataTables</p>
+
+<h3>Media</h3>
+
+		</div>
+		<div id="menu">
+			<ul>
+			
+			</ul>
+		</div>
+		<div id="footer">
+			
+			<small>Words: </small>
+		</div>
+	</div>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Hind+Vadodara:300,400,500,600,700');
+	</style>
+</body>
+</html>

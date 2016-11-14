@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QuickWiki</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div id="title"><a href="../home">QuickWiki</a></div>
+		</div>
+		<div id="content">
+			<h1>themes</h1>
+			<p><a href="../themes">Themes</a> are what controls how your <a href="../quickwiki">QuickWiki</a> looks and what the final html files
+will be structured like. You can download new themes and start using them by just
+changing a configuration variable. They are also easy to customize and develop
+on your own.</p>
+
+<h1>How to configure theme?</h1>
+
+<p>In your <code>config.toml</code>, you can set the value <code>theme.name</code> to whatever theme
+you want to use. Example to use the default theme:</p>
+
+<pre><code>[theme]
+  name = &quot;simpleblue&quot;
+</code></pre>
+
+<h1>List of themes</h1>
+
+<h2>simpleblue</h2>
+
+<p>simpleblue is the default theme. It looks something like this:</p>
+
+<p><img src="../media/simpleblue-theme.png" alt="screenshot of simpleblue" /></p>
+
+<h1>How themes are loaded</h1>
+
+<p>When compilation and writing of posts happen, theme is loaded based on the name
+variable in the configuration. It tries to find <code>./themes/:name</code> and load <code>style.css</code> and <code>template.html</code> from there. At that point magic variables are being replaced. Probably move these to golang templates
+in the future.</p>
+
+<h1>How to develop new themes</h1>
+
+<p>Take a look at how <code>simpleblue</code> was developed for now</p>
+
+		</div>
+		<div id="menu">
+			<ul>
+			
+			</ul>
+		</div>
+		<div id="footer">
+			
+			<small>Words: </small>
+		</div>
+	</div>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Hind+Vadodara:300,400,500,600,700');
+	</style>
+</body>
+</html>
