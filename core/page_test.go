@@ -5,7 +5,6 @@ import (
 
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/require"
-	"github.com/victorbjelkholm/quickwiki/core"
 )
 
 func initializeFS() afero.Fs {
@@ -21,7 +20,7 @@ func TestGetPageNamesFromDirectory(t *testing.T) {
 	require := require.New(t)
 	fs := initializeFS()
 
-	pages := core.ReadPagesFromDirectory(fs, "/pages")
+	pages := ReadPagesFromDirectory(fs, "/pages")
 
 	require.Equal(pages[0].Name, "Hello World")
 	require.Equal(pages[0].Filename, "hello-world.md")
@@ -40,15 +39,15 @@ func TestTurnFilenamesIntoPageNames(t *testing.T) {
 	}
 
 	for _, tc := range cases {
-		actual := core.FilenameIntoTitle(tc.input)
+		actual := FilenameIntoTitle(tc.input)
 		require.Equal(t, tc.output, actual)
 	}
 }
 
 func TestParsePage(t *testing.T) {
 	fs := initializeFS()
-	pages := core.ReadPagesFromDirectory(fs, "/pages")
-	parsedPage := core.ParsePage(pages[2], pages)
+	pages := ReadPagesFromDirectory(fs, "/pages")
+	parsedPage := ParsePage(pages[2], pages)
 	require.Equal(t, "Template", pages[2].Name)
 	require.Equal(t, []byte("Template is here"), parsedPage)
 }

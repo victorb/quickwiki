@@ -18,6 +18,10 @@
   run: |
     rm -rf ./dist
 
+- task: test
+  description: Runs tests
+  run: go test ./...
+
 - task: deploy-gh-pages
   description: Deploys ./wiki/public to gh-pages branch
   run: git push origin `git subtree split --prefix wiki/public master`:gh-pages --force
