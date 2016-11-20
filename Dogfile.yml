@@ -1,8 +1,14 @@
+- task: pre-deps
+  description: Installs required dependencies for dependencies
+  run: |
+    go get -u -v github.com/jteeuwen/go-bindata/...
+
 - task: deps
   description: Installs required dependencies
-  run: |
-    go get -u github.com/jteeuwen/go-bindata/...
-    go get ./...
+  pre:
+    - pre-deps 
+    - build-assets
+  run: go get ./...
 
 - task: build-assets
   description: Builds the assets into go-files
