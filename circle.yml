@@ -8,10 +8,11 @@ machine:
     - sudo tar -C /usr/local -xzf download/$GODIST
 dependencies:
   override:
+    - go get -v github.com/stretchr/testify
     - go get github.com/dogtools/dog
+test:
+  override:
     - dog pre-deps
     - dog build-assets
     - dog deps
-test:
-  override:
     - dog test
