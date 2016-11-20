@@ -5,9 +5,6 @@
 
 - task: deps
   description: Installs required dependencies
-  pre:
-    - pre-deps 
-    - build-assets
   run: go get -v ./...
 
 - task: build-assets

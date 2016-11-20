@@ -9,6 +9,8 @@ machine:
 dependencies:
   override:
     - go get github.com/dogtools/dog
+    - dog pre-deps
+    - dog build-assets
     - dog deps
 test:
   override:
