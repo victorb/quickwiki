@@ -8,10 +8,12 @@ machine:
     - sudo tar -C /usr/local -xzf download/$GODIST
 dependencies:
   override:
+    - cd /home/ubuntu/.go_workspace/src/github.com/victorbjelkholm/quickwiki
     - go get -v github.com/dogtools/dog
     - dog pre-deps
     - dog build-assets
     - dog deps
 test:
   override:
+    - cd /home/ubuntu/.go_workspace/src/github.com/victorbjelkholm/quickwiki
     - dog test
