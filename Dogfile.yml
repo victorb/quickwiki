@@ -4,6 +4,10 @@
     go get -u github.com/jteeuwen/go-bindata/...
     go get ./...
 
+- task: build-assets
+  description: Builds the assets into go-files
+  run: go-bindata -o assets/assets.go -pkg assets redirect-to-home
+
 - task: build
   description: Builds cross-platform binaries for QuickWiki
   pre: deps

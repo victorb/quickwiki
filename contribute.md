@@ -9,14 +9,8 @@ Once you have the requirements, you can simply do:
 
 ```
 dog deps
+dog build-assets
 dog build
 ```
 
 And now you should have a bunch of binaries in the `dist/` folder.
-
-## build
-
-```
-go-bindata -o assets/assets.go -pkg assets redirect-to-home
-go build -o quickwiki main.go
-```
