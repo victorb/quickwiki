@@ -9,6 +9,7 @@ It's grouped by Main (QuickWiki itself) and Plugins
 * [X] Themes
 * [X] Provide an actual cli interface rather than just one command
 * [ ] Encrypted pages
+* [ ] If linking to a page that doesn't exist, link should be red
 
 # Plugins
 
