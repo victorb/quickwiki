@@ -14,5 +14,7 @@ test:
   override:
     - dog pre-deps
     - dog build-assets
+    - pwd
+    - echo $PATH
     - dog deps
     - dog test
