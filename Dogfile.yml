@@ -5,7 +5,9 @@
 
 - task: deps
   description: Installs required dependencies
-  run: go get -v ./...
+  run: |
+    go get -v github.com/stretchr/testify
+    go get -v ./...
 
 - task: build-assets
   description: Builds the assets into go-files
