@@ -185,9 +185,11 @@ and usage of using your command.`,
 					Title    string
 					Contents template.HTML
 				}
+				Pages []string
 			}{}
 			data.Page.Title = pageName
 			data.Page.Contents = template.HTML(pageContentsString)
+			data.Pages = globalConfig.PageNames
 			err = globalTemplate.Execute(file, data)
 			// err = ioutil.WriteFile(renderedFilePath, []byte(outputToWrite), 0644)
 			PanicIfErr(err, "Could not write built file of "+pageName)
