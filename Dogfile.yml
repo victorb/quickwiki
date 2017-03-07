@@ -1,42 +1,42 @@
 - task: pre-deps
   description: Installs required dependencies for dependencies
-  run: |
+  code: |
     go get -u -v github.com/jteeuwen/go-bindata/...
 
 - task: deps
   description: Installs required dependencies
-  run: |
+  code: |
     go get -v github.com/stretchr/testify
     go get -v ./...
 
 - task: build-assets
   description: Builds the assets into go-files
-  run: go-bindata -o assets/assets.go -pkg assets redirect-to-home
+  code: go-bindata -o assets/assets.go -pkg assets redirect-to-home
 
 - task: build
   description: Builds cross-platform binaries for QuickWiki
   pre: deps
-  run: ./build.sh
+  code: ./build.sh
 
 - task: build-wiki
   description: Builds our wiki from ./wiki
-  run: go run main.go build ./wiki
+  code: go run main.go build ./wiki
 
 - task: clean
   description: Cleans out directories that are not supposed to be there
-  run: |
+  code: |
     rm -rf ./dist
 
 - task: test
   description: Runs tests
-  run: go test ./...
+  code: go test ./...
 
 - task: deploy-gh-pages
   description: Deploys ./wiki/public to gh-pages branch
-  run: git push origin `git subtree split --prefix wiki/public master`:gh-pages --force
+  code: git push origin `git subtree split --prefix wiki/public master`:gh-pages --force
 
 - task: deploy-dns
   description: Deploys ./wiki/public to quickwiki.tech
-  run: |
+  code: |
     go run main.go publish -q ./wiki > ./wiki/published-version
     dnslink-deploy -d quickwiki.tech -r @ -p /ipfs/$(cat ./wiki/published-version)
